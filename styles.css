@@ -82,42 +82,6 @@ body {
     color: var(--primary-color);
 }
 
-/* Hackathon Badge */
-.hackathon-badge {
-    position: absolute;
-    top: -35px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 8px 20px;
-    border-radius: 0 0 20px 20px;
-    font-family: var(--font-primary);
-    font-weight: 600;
-    font-size: 0.85rem;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-    animation: pulse 2s infinite;
-    z-index: 1001;
-}
-
-.hackathon-text {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-@keyframes pulse {
-    0% {
-        transform: translateX(-50%) scale(1);
-    }
-    50% {
-        transform: translateX(-50%) scale(1.05);
-    }
-    100% {
-        transform: translateX(-50%) scale(1);
-    }
-}
-
 /* Hero Section */
 .hero {
     background-color: var(--white);
@@ -646,78 +610,5 @@ audio {
     
     .sample-audio-section {
         padding: 20px;
-    }
-}
-
-/* Floating Hackathon Badge */
-.floating-hackathon-badge {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-    color: white;
-    padding: 12px 20px;
-    border-radius: 50px;
-    font-family: var(--font-primary);
-    font-weight: 600;
-    font-size: 0.9rem;
-    box-shadow: 0 8px 25px rgba(238, 90, 36, 0.5);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    animation: float 3s ease-in-out infinite;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.floating-hackathon-badge:hover {
-    transform: scale(1.1);
-    box-shadow: 0 12px 35px rgba(238, 90, 36, 0.7);
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-.badge-pulse {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 50px;
-    background: inherit;
-    z-index: -1;
-    animation: badge-pulse-animation 2s infinite;
-}
-
-@keyframes badge-pulse-animation {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.7;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-/* Responsive adjustments for floating badge */
-@media (max-width: 768px) {
-    .floating-hackathon-badge {
-        bottom: 20px;
-        right: 20px;
-        font-size: 0.8rem;
-        padding: 10px 16px;
     }
 }
