@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Sound Analyzer - Understand Your Baby's Needs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="hackathon-badge">
+                <span class="hackathon-text">🏆 Hacktivism II Participant</span>
+            </div>
+            <div class="logo">
+                <h1>Baby Sound Analyzer</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#analyze">Analyze</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Understand What Your Baby Is Trying to Tell You</h2>
+                <p class="tagline">Advanced AI analysis of baby sounds to help you respond to your baby's needs effectively</p>
+                <a href="#analyze" class="cta-button">Start Analysis</a>
+            </div>
+        </div>
+    </section>
+
+    <main id="analyze" class="main-content">
+        <div class="container">
+            <section class="analysis-section">
+                <h2>Record and Analyze Baby Sounds</h2>
+                
+                <div class="disclaimer">
+                    <p><strong>Important:</strong> This tool provides AI-generated insights and is not a substitute for professional medical advice. Always consult with healthcare professionals for medical concerns.</p>
+                </div>
+
+                <div class="recording-interface">
+                    <div class="recording-controls">
+                        <button id="recordButton" class="record-button">Start Recording</button>
+                        <button id="stopButton" class="stop-button" disabled>Stop Recording</button>
+                        <button id="analyzeButton" class="analyze-button" disabled>Analyze Sound</button>
+                    </div>
+                    
+                    <div class="recording-status">
+                        <div id="recordingIndicator" class="recording-indicator hidden"></div>
+                        <div id="recordingTime" class="recording-time hidden">00:00</div>
+                        <div id="audioPlayback" class="audio-playback hidden">
+                            <audio id="audioPlayer" controls></audio>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sample-audio-section">
+                    <h3>Or Try With Sample Audio</h3>
+                    <p>Don't have a baby crying right now? Try one of our sample audio files:</p>
+                    <div class="sample-audio-options">
+                        <div class="sample-option" data-audio="sounds/sample/baby-crying.mp3">
+                            <h4>Baby Crying</h4>
+                            <p>Sample of a baby crying</p>
+                            <button class="sample-button">Use This Sample</button>
+                        </div>
+                        <div class="sample-option" data-audio="sounds/sample/baby-laughing.mp3">
+                            <h4>Baby Laughing</h4>
+                            <p>Sample of a happy baby</p>
+                            <button class="sample-button">Use This Sample</button>
+                        </div>
+                </div>
+
+                <div id="resultsSection" class="results-section hidden">
+                    <h3>Analysis Results</h3>
+                    <div class="results-container">
+                        <div class="condition-interpretation">
+                            <h4>Baby's Condition</h4>
+                            <div id="conditionResult" class="result-text"></div>
+                            <div id="confidenceMeter" class="confidence-meter">
+                                <span>Confidence:</span>
+                                <div class="confidence-bar">
+                                    <div id="confidenceLevel" class="confidence-level"></div>
+                                </div>
+                                <span id="confidencePercentage">0%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="recommendations">
+                            <h4>Recommended Actions</h4>
+                            <ul id="recommendationsList" class="recommendations-list"></ul>
+                        </div>
+                    </div>
+                    
+                    <div class="analysis-footer">
+                        <button id="newAnalysis" class="cta-button">New Analysis</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Baby Sound Analyzer</h2>
+            <p>Baby Sound Analyzer uses advanced audio processing and machine learning to help parents understand their baby's needs through sound analysis. Our system analyzes various baby sounds to provide insights into potential needs and conditions.</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <h3>Advanced Analysis</h3>
+                    <p>Our AI-powered engine analyzes audio patterns to identify different types of baby sounds.</p>
+                </div>
+                <div class="feature">
+                    <h3>Instant Insights</h3>
+                    <p>Get immediate analysis and recommendations to help you respond to your baby's needs.</p>
+                </div>
+                <div class="feature">
+                    <h3>Privacy First</h3>
+                    <p>All audio processing happens locally in your browser. Your recordings never leave your device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>Baby Sound Analyzer | Created by @im_umair_khann | Competing in Hacktivism II</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Hackathon Badge -->
+    <div class="floating-hackathon-badge">
+        <span>🚀 Hacktivism II</span>
+        <div class="badge-pulse"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
